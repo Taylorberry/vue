@@ -1,6 +1,6 @@
 <template>
   <div id="index">
-   index页面
+   <video src="./video/brave.mp4"></video>
    <button @click="addProduct">add</button>
   </div>
 </template>
