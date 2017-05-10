@@ -1,6 +1,5 @@
 <template>
   <div id="index">
-   <video src="../../video/勇敢-五月天-HD.mp4" controls></video>
    <button @click="addProduct">add</button>
   </div>
 </template>
