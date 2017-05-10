@@ -1,11 +1,8 @@
 <template>
   <div id="app">
       <Headers></Headers>
+      <Main></Main>
       <Navs></Navs>
-      <Foot></Foot>
-      <div class="calender">
-        <calendar :value.sync="value" title="check In"></calendar>
-      </div>
   </div>
 </template>
 
@@ -14,6 +11,7 @@ import Headers from './components/Headers'
 import Hello from './components/Hello'
 import Navs from './components/Navs'
 import Foot from './components/Foot'
+import Main from './components/Main'
 import Calendar from '../node_modules/vux/dist/components/calendar'
 import '../node_modules/vux/dist/vux.css'
 
@@ -23,6 +21,7 @@ export default {
     Navs,
     Foot,
     Headers,
+    Main,
     Calendar
   }
 }
@@ -52,6 +51,8 @@ body {
   max-width: 600px;
   font-family: Source Sans Pro, Helvetica, sans-serif;
   text-align: center;
+  display:flex;
+  flex-direction:column;
   width:100%;
   height:100%;
 }
@@ -61,25 +62,18 @@ body {
   text-decoration: none;
 }
 
-.logo {
-  width: 100px;
-  height: 100px
-}
-
-.Foot{
-  float:left;
-  background: red;
-}
-
 .Navs{
-  float:right;
-  background: blue;
-  list-style:none;
+  width:100%;
+  height:60px;
+  background:#000;
 }
-.calender{
-    float:right;
-    width:500px;
-    height:500px;
-    border:1p solid #000;
+
+.Navs ul{
+    display:flex;
 }
+
+.Navs ul li{
+  flex:1;
+}
+
 </style>
